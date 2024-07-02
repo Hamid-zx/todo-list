@@ -1,0 +1,50 @@
+.Projects {
+    display: flex;
+    width: 99%;
+    max-width: 1200px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+}
+
+.projectboxes {
+    cursor: pointer;
+    margin-top: 8px;
+    text-align: center;
+    background-color: #576370;
+    padding: 25px;
+    height: 100px;
+    width: 170px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+}
+
+.projectboxes:hover {
+    background-color: #4a5568;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.projectboxes .labels {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 32px;
+    background-color: #788797;
+    border-radius: 7px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.projectboxes:hover .labels {
+    background-color: #5a6a7b;
+    color: white;
+}

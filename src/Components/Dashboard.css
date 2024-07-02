@@ -1,0 +1,33 @@
+.main-content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  margin: 40px;
+}
+
+.dashboard h2 {
+  font-size: 22px;  
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  border-bottom: 3px solid black;
+  font-weight: 900;
+}
+
+.dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.dashboard p {
+  font-size: 18px;
+  color: #6c757d;
+}

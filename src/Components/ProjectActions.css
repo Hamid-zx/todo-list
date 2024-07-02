@@ -1,0 +1,109 @@
+.ProjectActionsContainer {
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard {
+  margin: 40px;
+}
+
+.dashboard h2 {
+  font-size: 22px;  
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  border-bottom: 3px solid black;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="text"], select {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #576370;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #576370;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #4a5568;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: listItemFadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes listItemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+ul li:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+ul li:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+ul li button {
+  background-color: #e3342f;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ul li button:hover {
+  background-color: #cc1f1a;
+  transform: scale(1.05);
+}

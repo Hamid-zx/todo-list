@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Sidebar from './Components/Sidebar';
+import Dashboard from './Components/Dashboard';
+import Projects from './Components/Projects';
+import ProjectActions from './Components/ProjectActions';
+import ProjectDetail from './Components/ProjectDetail';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import About from './Components/About';
 
 function App() {
+  const [projects, setProjects] = useState([
+    { name: 'Work', tasks: [] },
+    { name: 'Personal', tasks: [] },
+    { name: 'Miscellaneous', tasks: [] }
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Sidebar />
+
+        <Routes>
+          <Route exact path="/" element={<Dashboard projects={projects} />} />
+          <Route exact path="/Projects" element={<Projects projects={projects} />} />
+          <Route exact path="/Projects/:projectName" element={<ProjectDetail projects={projects} setProjects={setProjects} />} />
+          <Route exact path="/ProjectActions" element={<ProjectActions projects={projects} setProjects={setProjects} />} />
+          <Route exact path="/About" element={<About />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

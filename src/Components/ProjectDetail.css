@@ -1,0 +1,63 @@
+.ProjectDetailContainer {
+    padding: 20px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .dashboard {
+    margin: 40px;
+  }
+  
+  .dashboard h2 {
+    font-size: 22px;  
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    border-bottom: 3px solid black;
+    font-weight: 900;
+  }
+  
+  input[type="text"] {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #576370;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4a5568;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  ul li button {
+    background-color: #e3342f;
+  }
+  
+  ul li button:hover {
+    background-color: #cc1f1a;
+  }
+  
